@@ -6,7 +6,7 @@
     "source_ami"    : "ami-12345678",
     "vpc_id"        : "vpc-12345678",
     "subnet_id"     : "subnet-abcd1234",
-    "inst_type"     : "t2.micro"
+    "inst_type"     : "t2.small"
   },
   "builders": [{
     "type": "amazon-ebs",
