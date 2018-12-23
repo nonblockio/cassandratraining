@@ -9,9 +9,15 @@
     enabled: yes
   become: true
 
-- name: Install dsc20
+- name: Install java8
   yum:
-    name: dsc20
+    name: java-1.8.0-openjdk.x86_64
+    state: present
+  become: true
+
+- name: Install dsc30
+  yum:
+    name: dsc30
     state: present
   become: true
 
