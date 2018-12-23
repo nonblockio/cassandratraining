@@ -12,6 +12,13 @@ resource "aws_elb" "cassandra_elb" {
     lb_protocol       = "TCP"
   }
 
+  listener {
+    instance_port     = 9042
+    instance_protocol = "TCP"
+    lb_port           = 9042
+    lb_protocol       = "TCP"
+  }
+
   health_check {
     healthy_threshold   = 2
     unhealthy_threshold = 2

@@ -59,7 +59,7 @@ resource "aws_security_group_rule" "cassandra_9042" {
   from_port         = 9042
   to_port           = 9042
   protocol          = "tcp"
-  cidr_blocks       = ["${aws_subnet.az1_subnet_private.cidr_block}", "${aws_subnet.az2_subnet_private.cidr_block}", "${aws_subnet.az3_subnet_private.cidr_block}"]
+  cidr_blocks       = ["${aws_subnet.az1_subnet_private.cidr_block}", "${aws_subnet.az2_subnet_private.cidr_block}", "${aws_subnet.az3_subnet_private.cidr_block}", "${aws_subnet.az1_subnet_public.cidr_block}", "${aws_subnet.az2_subnet_public.cidr_block}", "${aws_subnet.az3_subnet_public.cidr_block}"]
   security_group_id = "${aws_security_group.cassandra_private_sg.id}"
 }
 
